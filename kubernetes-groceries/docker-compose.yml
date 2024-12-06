@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  catalog_api:
+    image: ${DOCKER_REGISTRY-}catalog
+    build:
+      context: .
+      dockerfile: Catalog_API/Dockerfile
+
+  list_api:
+    image: ${DOCKER_REGISTRY-}list
+    build:
+      context: .
+      dockerfile: List_API/Dockerfile
+
